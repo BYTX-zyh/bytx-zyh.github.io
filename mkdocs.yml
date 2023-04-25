@@ -1,0 +1,39 @@
+site_name: 白衣踏雪-wiki
+theme:
+  name: material # 主题名称
+  palette: # 自动亮/暗色
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  font:
+    code: Roboto Mono
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.tracking # 自动更改url为当前活动点
+    - navigation.expand # 默认展开所有小节
+    - navigation.path # 导航路径
+    - navigation.prune
+    - toc.follow
+    - navigation.top
+nav:
+    - 杂项:
+      - 杂项/index.md
+      - mkdocs: 杂项/mkdocs.md

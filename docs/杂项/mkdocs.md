@@ -1,4 +1,6 @@
 
+[TOC]
+
 使用 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 创建wiki .
 
 # [安装](https://squidfunk.github.io/mkdocs-material/getting-started/#installation)
@@ -21,17 +23,12 @@ theme:
   name: material
 ```
 
-# [详细配置](https://squidfunk.github.io/mkdocs-material/setup/)
+[详细配置](https://squidfunk.github.io/mkdocs-material/setup/)查看此处,包括有设置颜色、语言、导航、页眉页脚等.
 
-##
 
 # 发布
 
-通过 github action 将内容发布到 github pages.
-
-将如下代码添加到 `.github/workflows/cl.yml` 中:
-
-
+将[此处](https://squidfunk.github.io/mkdocs-material/publishing-your-site/#material-for-mkdocs) 代码添加到 `.github/workflows/cl.yml` 中,而后从 github 中转到 settings-pages ,将其设置为从 gh-pages 分支发布网站即可(可能需要清空缓存重新打开).
 
 # 边写边预览
 

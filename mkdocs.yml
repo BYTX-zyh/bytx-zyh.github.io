@@ -1,8 +1,8 @@
 site_name: 白衣踏雪-wiki
 theme:
   name: material # 主题名称
+  nav: True
   palette: # 自动亮/暗色
-
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
@@ -22,17 +22,57 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-  font:
-    code: Roboto Mono
-  language: zh
+  font: # 字体
+    code: Roboto Mono # 代码字体
+  language: zh # 语言
   features:
-    - navigation.tabs
+    - navigation.instant # 启动即时加载
+    - navigation.tabs # 粘性tab 向下滑时保留
+    - navigation.tabs.sticky
     - navigation.tracking # 自动更改url为当前活动点
+    - navigation.sections # 导航
     - navigation.expand # 默认展开所有小节
     - navigation.path # 导航路径
-    - navigation.prune
-    - toc.follow
-    - navigation.top
+    - navigation.prune # 优化构建
+    - navigation.indexes # 将标题页面并入标题
+    #- toc.integrate
+    - toc.follow # 侧边栏跟随效果
+    # - navigation.top # 返回顶部按钮
+    - header.autohide # 滚动一定值后自动隐藏顶部
+markdown_extensions:
+
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
 nav:
     - 杂项:
       - 杂项/index.md

@@ -39,41 +39,59 @@ theme:
     - toc.follow # 侧边栏跟随效果
     # - navigation.top # 返回顶部按钮
     - header.autohide # 滚动一定值后自动隐藏顶部
-markdown_extensions:
+    - content.code.copy # 代码复制按钮
+    - content.code.annotate # 代码注释功能
 
-  # Python Markdown
-  - abbr
+markdown_extensions:
   - admonition
-  - attr_list
   - def_list
   - footnotes
-  - md_in_html
+  - meta
   - toc:
-      permalink: true
-
-  # Python Markdown Extensions
+      permalink: ""
+      slugify: !!python/name:pymdownx.slugs.uslugify
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.betterem:
-      smart_enable: all
   - pymdownx.caret
+  - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.highlight
-  - pymdownx.inlinehilite
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.inlinehilite # 内联代码块高亮
   - pymdownx.keys
+  - pymdownx.magiclink
   - pymdownx.mark
+  - pymdownx.snippets # 用于嵌入文件
+  - pymdownx.progressbar
   - pymdownx.smartsymbols
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: math
+          class: arithmatex
+          format: !!python/name:pymdownx.arithmatex.fence_mathjax_format
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight: # 代码高亮
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list # 图片功能
+  - md_in_html
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 nav:
+    - 高等数学:
+      - 常微分方程: 高等数学/常微分方程/常微分方程.md
     - 杂项:
       - 杂项/index.md
       - mkdocs: 杂项/mkdocs.md

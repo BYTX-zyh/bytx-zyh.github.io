@@ -86,12 +86,16 @@ markdown_extensions:
   - attr_list # 图片功能
   - md_in_html
 extra_javascript:
-  - javascripts/mathjax.js
+  # - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 nav:
+    - emacs:
+      - rime输入法配置: emacs/rime.md
     - 高等数学:
-      - 常微分方程: 高等数学/常微分方程/常微分方程.md
+      - 极限: 高等数学/极限.md
+      - 三角函数: 高等数学/三角函数.md
+      - 常微分方程: 高等数学/常微分方程.md
       - 常数项级数: 高等数学/常数项级数.md
     - 杂项:
       - 杂项/index.md

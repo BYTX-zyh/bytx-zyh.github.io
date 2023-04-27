@@ -31,7 +31,7 @@ theme:
     - navigation.tabs.sticky
     - navigation.tracking # 自动更改url为当前活动点
     - navigation.sections # 导航
-    - navigation.expand # 默认展开所有小节
+   # - navigation.expand # 默认展开所有小节
     - navigation.path # 导航路径
     - navigation.prune # 优化构建
     - navigation.indexes # 将标题页面并入标题
@@ -86,11 +86,13 @@ markdown_extensions:
   - attr_list # 图片功能
   - md_in_html
 extra_javascript:
-  # - javascripts/mathjax.js
+  - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 nav:
     - emacs:
+      - 插件:
+        - lazy-load : emacs/lazy-load.md
       - rime输入法配置: emacs/rime.md
     - 高等数学:
       - 函数、极限与连续:

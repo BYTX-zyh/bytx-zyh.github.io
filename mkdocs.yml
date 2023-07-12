@@ -22,6 +22,7 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+
   font: # 字体
     code: Roboto Mono # 代码字体
   language: zh # 语言
@@ -90,22 +91,5 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 nav:
-    - emacs:
-      - 插件:
-        - lazy-load : emacs/lazy-load.md
-      - rime输入法配置: emacs/rime.md
-    - 高等数学:
-      - 函数、极限与连续:
-        - 三角函数: 高等数学/三角函数.md
-        - 极限: 高等数学/极限.md
-        - 连续: 高等数学/连续.md
-      - 一元函数微分学
-      - 一元函数积分学
-      - 多元函数微分学
-      - 多元函数积分学
-      - 常微分方程: 高等数学/常微分方程.md
-      - 无穷级数:
-        - 常数项级数: 高等数学/常数项级数.md
-    - 杂项:
-      - 杂项/index.md
-      - mkdocs: 杂项/mkdocs.md
+  - 技术杂谈:
+    - Mkdocs: 技术杂谈/mkdocs.md

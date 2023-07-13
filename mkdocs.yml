@@ -2,46 +2,50 @@ site_name: 白衣踏雪-wiki
 theme:
   name: material # 主题名称
   nav: True
-  palette: # 自动亮/暗色
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
+  palette:
+      # 深色浅色模式 https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme
+    scheme: default # 默认浅色模式：default 深色模式：slate
 
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+    # 顶部标题色 https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
+    primary: light blue
 
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to system preference
+    # 强调色 https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
+    accent: light green
 
   font: # 字体
-    code: Roboto Mono # 代码字体
+    text : JetBrains Mono # 文本字体
+    code: JetBrains Mono #  代码字体
+
   language: zh # 语言
+  
+  # logo 与 icon
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#icon-bundled
+  icon: 
+    logo: material/library-outline
+
   features:
     - navigation.instant # 启动即时加载
+
     - navigation.tabs # 粘性tab 向下滑时保留
     - navigation.tabs.sticky
-    - navigation.tracking # 自动更改url为当前活动点
+
+    - navigation.tracking # 锚点跟踪 自动更改url为当前活动点
+
     - navigation.sections # 导航
    # - navigation.expand # 默认展开所有小节
     - navigation.path # 导航路径
     - navigation.prune # 优化构建
+
     - navigation.indexes # 将标题页面并入标题
     #- toc.integrate
     - toc.follow # 侧边栏跟随效果
-    # - navigation.top # 返回顶部按钮
+    - navigation.top # 返回顶部按钮
     - header.autohide # 滚动一定值后自动隐藏顶部
     - content.code.copy # 代码复制按钮
     - content.code.annotate # 代码注释功能
+
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索高亮
 
 markdown_extensions:
   - admonition
@@ -90,6 +94,10 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search 
+
 nav:
   - 技术杂谈:
     - Mkdocs: 技术杂谈/mkdocs.md

@@ -84,7 +84,10 @@ jobs:
 关于详细的配置和一些特定语法的内容查看[material setup](https://squidfunk.github.io/mkdocs-material/setup/)部分，以下只对其重要配置或需要注意的语法进行简述。
 
 - [修改主题的颜色/亮色暗色模式](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#changing-the-colors)
-- [cishi]
+- [字体](https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/)
+- [语言](https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/)
+- [logo与icon](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#icon-bundled)
+- 
 
 [详细配置](https://squidfunk.github.io/mkdocs-material/setup/)查看此处,包括有设置颜色、语言、导航、页眉页脚等.
 
